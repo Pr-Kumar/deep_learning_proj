@@ -1,0 +1,8 @@
+The following is the code for running various sentiment analysis models on the Amazon Review Dataset based on the report "Utilizing DialogueRNN on Single-Party Speaker Data for Emotion Recognition". There are 4 python notebooks which can be run using jupyter notebook and are separated by model variants. For setting up your environment please use anaconda and run the following:
+
+1) Download the dataset from https://www.kaggle.com/bittlingmayer/amazonreviews and store the files in the data folder
+2) Run conda create --name <env> --file requirements.txt
+     - Please make sure that if your want to run the models on your GPU you have the GPU version of pytorch downloaded
+3) Make sure to have the data folder accessible on the same level as the other notebooks as they will contain saved versions of our model and data files for easy running. 
+
+For each of the files, we have labeled the hyperparameters used and show the graphs we were able to generate as sample information. Additionally we reference 3 python files called model.py, train_test.py, and utils.py. Model.py is copied from the paper "DialogueRNN: An Attentive RNN for Emotion Detection in Conversations" for consistency. For more information please look at https://arxiv.org/pdf/1811.00405v4.pdf. train_test.py contains the methods we used for training and testing the models including how we generate the loss graphs and show the test accuracy. utils.py contains the methods for preprocessing the text data to simplify the notebooks. 
